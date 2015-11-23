@@ -119,7 +119,7 @@ Changelog
 
 Version 1.4 - 2014-12-15
 - Bugfix: Replace setLine call to replaceRange (for CodeMirror 4)
-  This fixed &#x0; appearing in the source code.
+  This fixes &amp;#x0; appearing in the source code.
 - Note: This plugin requires CodeMirror version 4 (3 is no longer supported)
 
 Version 1.3 - 2014-03-04
@@ -128,9 +128,8 @@ Version 1.3 - 2014-03-04
 - Macintosh users now see Macintosh keyboard shortcuts.
 
 Version 1.2 - 2013-09-04
-- Dirty state of CodeMirror now passed on to TinyMCE.
-- When submitting CodeMirror code to TinyMCE, cursor position is retained.
-  Note: this only works when the cursor is *not* inside a <tag>.
+- When you close the CodeMirror popup window, the cursor position will be maintained; the cursor in TinyMCE will be moved to wherever it was in CodeMirror. This only works when the cursor is inside a text-node (*not* in a &lt;tag&gt;) in CodeMirror.
+- When the code in CodeMirror becomes “dirty”, TinyMCE will be notified about it (made dirty as well).
 
 Version 1.1 - 2013-07-19
 - New options jsFiles and cssFiles.
